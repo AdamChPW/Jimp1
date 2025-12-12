@@ -4,6 +4,6 @@
 void main(void){
     printf("Napisalem to w CMD :\n");
     int i = 0;
-    for(i=0;i<1000; i++)
+    for(i=0;i<100; i++)
         printf("%d\n", i);
 }
