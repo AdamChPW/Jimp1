@@ -13,11 +13,6 @@ int eliminate(Matrix *mat, Matrix *b){
 	const double EPS = 1e-12;
 	while (r < mat->r - 1 && c < mat->c) {
 		maxr = r;
-		for (i = r + 1; i < mat->r; i++) {
-			if (fabs(mat->data[maxr][c]) < fabs(mat->data[i][c])) {
-				maxr = i;
-			}
-		}
 		if (fabs(mat->data[maxr][c]) < EPS) {
 			return 1;
 		}
