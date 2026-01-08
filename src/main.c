@@ -23,7 +23,10 @@ int main(int argc, char ** argv) {
 	else if (x != NULL) {
 		res = backsubst(x,A,b);
 
-		printToScreen(x);
+		if(res == 0)
+			printToScreen(x);
+		else
+			fprintf(stderr, "Nie udalo sie wyznaczyc macierzy X.");
 	  freeMatrix(x);
 	} else {
 					fprintf(stderr,"Błąd! Nie mogłem utworzyć wektora wynikowego x.\n");
