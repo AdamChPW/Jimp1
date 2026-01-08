@@ -10,7 +10,7 @@
 int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 	
 	if((mat->c != mat-> r) || (x->r != b->r) || (mat->c != x->r)){
-		fprintf(stderr,"backsubst.c: [2] Niespojne rozmiary macierzy.");
+		fprintf(stderr,"backsubst.c: [2] Niespojne rozmiary macierzy.\n");
 		return 2;
 	}
 
@@ -21,7 +21,7 @@ int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 	while(point >= 0)
 	{
 		if(mat->data[point][point] == 0){
-			fprintf(stderr,"backsubst.c: [1] Element zerowy na diagonali (Blad dzielenia przez 0).");
+			fprintf(stderr,"backsubst.c: [1] Element zerowy na diagonali (Blad dzielenia przez 0).\n");
 			return 1;
 		}
 
