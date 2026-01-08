@@ -18,7 +18,9 @@ int main(int argc, char ** argv) {
 
 	res = eliminate(A,b);
 	x = createMatrix(b->r, 1);
-	if (x != NULL) {
+	if (res == 1)
+		fprintf (stderr, "To jest macierz osobliwa\n");
+	else if (x != NULL) {
 		res = backsubst(x,A,b);
 
 		printToScreen(x);
