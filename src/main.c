@@ -26,7 +26,7 @@ int main(int argc, char ** argv) {
 		if(res == 0)
 			printToScreen(x);
 		else
-			fprintf(stderr, "Nie udalo sie wyznaczyc macierzy X.");
+			fprintf(stderr, "Nie udalo sie wyznaczyc macierzy X.\n");
 	  freeMatrix(x);
 	} else {
 					fprintf(stderr,"Błąd! Nie mogłem utworzyć wektora wynikowego x.\n");
