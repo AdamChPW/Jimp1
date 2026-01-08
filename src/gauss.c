@@ -14,7 +14,7 @@ int eliminate(Matrix *mat, Matrix *b){
 		//new pivot
 		maxr = r;
 		for(i = r + 1; i< mat->r; i++)
-			if(mat->data[i][c] > mat->data[maxr][c])
+			if(fabs(mat->data[i][c]) > fabs(mat->data[maxr][c]))
 				maxr = i;
 		if (fabs(mat->data[maxr][c]) == 0) {
 			return 1;
