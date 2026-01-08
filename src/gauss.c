@@ -12,6 +12,7 @@ int eliminate(Matrix *mat, Matrix *b){
 	double x;
 	const double EPS = 1e-12;
 	while (r < mat->r - 1 && c < mat->c) {
+		//new pivot
 		maxr = r;
 		if (fabs(mat->data[maxr][c]) < EPS) {
 			return 1;
